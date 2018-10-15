@@ -44,6 +44,7 @@ text = new fabric.Text('bold italic', {
     fontSize: 24
 });
 canvas.add(text);
+canvas.renderAll();
 
 var out = fs.createWriteStream(__dirname + '/customfont2.png');
 var stream = canvas.createPNGStream();
