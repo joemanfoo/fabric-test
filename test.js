@@ -12,8 +12,7 @@ canvas.contextContainer.addFont(font);  // when using createPNGStream or createJ
 var text = new fabric.Text('regular', {
     left: 150,
     top: 50,
-    fontFamily: 'Ubuntu',
-    fontSize: 24
+    fontFamily: 'Ubuntu'
 });
 canvas.add(text);
 
@@ -30,8 +29,7 @@ text = new fabric.Text('italic', {
     left: 150,
     top: 150,
     fontFamily: 'Ubuntu',
-    fontStyle: 'italic',
-    fontSize: 24
+    fontStyle: 'italic'
 });
 canvas.add(text);
 
@@ -40,13 +38,12 @@ text = new fabric.Text('bold italic', {
     top: 200,
     fontFamily: 'Ubuntu',
     fontWeight: 'bold',
-    fontStyle: 'italic',
-    fontSize: 24
+    fontStyle: 'italic'
 });
 canvas.add(text);
 canvas.renderAll();
 
-var out = fs.createWriteStream(__dirname + '/customfont2.png');
+var out = fs.createWriteStream(__dirname + '/customfont.png');
 var stream = canvas.createPNGStream();
 stream.on('data', function(chunk) {
     out.write(chunk);
